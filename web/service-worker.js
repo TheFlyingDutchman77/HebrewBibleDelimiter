@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "hebrew-bible-delimiter-v1";
+const CACHE_NAME = "hebrew-bible-delimiter-v2";
 const APP_FILES = ["./", "./index.html", "./styles.css", "./app.js"];
 
 self.addEventListener("install", (event) => {
@@ -19,10 +19,21 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") {
+  if (event.request.method !== "GET" || new URL(event.request.url).origin !== self.location.origin) {
 	return;
   }
   event.respondWith(
-	caches.match(event.request).then((cached) => cached || fetch(event.request))
+	fetch(event.request).then((response) => {
+	  if (response.ok) {
+		const copy = response.clone();
+		event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)));
+	  }
+	  return response;
+	}).catch(() => caches.match(event.request).then((cached) => {
+	  if (cached) {
+		return cached;
+	  }
+	  throw new Error("This page is unavailable offline and has not been cached.");
+	}))
   );
 });

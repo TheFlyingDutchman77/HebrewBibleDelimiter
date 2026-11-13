@@ -60,6 +60,10 @@ body {
   font-size: 0.9rem;
 }
 
+.note-placeholder {
+  visibility: hidden;
+}
+
 textarea {
   width: 100%;
   flex: 1;

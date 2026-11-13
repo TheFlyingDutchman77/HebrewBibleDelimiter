@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mark Hebrew disjunctive accents and export RTL-formatted Word documents.">
+  <title>Hebrew Bible Delimiter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+	<header class="page-header">
+	  <h1>Hebrew Bible Delimiter</h1>
+	  <p class="instruction">Select Hebrew text in Logos, and copy using 'Text Only' option.</p>
+	</header>
+
+	<section class="panes" aria-label="Hebrew text processor">
+	  <div class="panel">
+		<label for="inputText">Hebrew text</label>
+		<textarea id="inputText" dir="rtl" lang="he" spellcheck="false" placeholder="Paste Hebrew text here"></textarea>
+	  </div>
+	  <div class="panel">
+		<label for="outputText">Processed output (logical text order)</label>
+		<p class="note">Text can be shown incorrectly; use RTL Preview to see correctly formatted text.</p>
+		<textarea id="outputText" dir="rtl" lang="he" spellcheck="false" readonly aria-live="polite"></textarea>
+	  </div>
+	</section>
+
+	<div class="actions" aria-label="Actions">
+	  <div class="primary-actions">
+		<button id="processButton" type="button">Process</button>
+		<button id="clearButton" type="button" class="secondary">Clear</button>
+		<button id="saveButton" type="button" class="secondary">Save Word</button>
+		<button id="previewButton" type="button" class="secondary">RTL Preview</button>
+	  </div>
+	  <button id="quitButton" type="button" class="secondary">Quit</button>
+	</div>
+	<p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

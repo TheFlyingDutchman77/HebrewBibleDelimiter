@@ -1,0 +1,116 @@
+﻿# -*- coding: utf-8 -*-
+"""A simple text interface for the Hebrew Bible delimiter processor."""
+
+import html
+import re
+import tempfile
+import tkinter as tk
+import webbrowser
+from tkinter import messagebox, ttk
+
+from Hebrew_Bible_Delimiter import process_text
+
+
+_MARKER_SUFFIX = re.compile(r"((?:\((?:Potential )?\d+-(?:II|III|IV|V)\))+)\Z")
+
+
+def _rtl_preview_html(text):
+    escaped = html.escape(text)
+    escaped = _MARKER_SUFFIX.sub(
+        lambda marker: '<bdi dir="ltr">' + marker.group(1) + "</bdi>", escaped
+    )
+    return (
+        '<!doctype html><html lang="he" dir="rtl"><head>'
+        '<meta charset="utf-8"><title>Hebrew Bible Delimiter</title>'
+        '<style>body{font:18pt "Segoe UI",sans-serif;margin:2em}'
+        'pre{white-space:pre-wrap;unicode-bidi:plaintext}</style></head>'
+        '<body><pre dir="rtl">' + escaped + "</pre></body></html>"
+    )
+
+
+class HebrewBibleDelimiterApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Hebrew Bible Delimiter")
+        self.root.geometry("1000x600")
+        self.root.minsize(700, 400)
+
+        self.root.columnconfigure(0, weight=1)
+        self.root.rowconfigure(0, weight=1)
+
+        panes = ttk.Frame(root, padding=12)
+        panes.grid(row=0, column=0, sticky="nsew")
+        panes.columnconfigure(0, weight=1)
+        panes.columnconfigure(1, weight=1)
+        panes.rowconfigure(1, weight=1)
+
+        ttk.Label(panes, text="Hebrew text").grid(row=0, column=0, sticky="w", padx=(0, 8), pady=(0, 6))
+        ttk.Label(panes, text="Processed output (logical text order)").grid(row=0, column=1, sticky="w", padx=(8, 0), pady=(0, 6))
+
+        self.input_text = self._create_text_area(panes, row=1, column=0, padx=(0, 8))
+        self.output_text = self._create_text_area(panes, row=1, column=1, padx=(8, 0))
+
+        button_row = ttk.Frame(panes)
+        button_row.grid(row=2, column=0, columnspan=2, pady=(12, 0))
+        ttk.Button(button_row, text="Process", command=self.process).grid(row=0, column=0, padx=4)
+        ttk.Button(button_row, text="Clear", command=self.clear).grid(row=0, column=1, padx=4)
+        ttk.Button(button_row, text="RTL Preview", command=self.open_rtl_preview).grid(row=0, column=2, padx=4)
+        ttk.Button(button_row, text="Quit", command=root.destroy).grid(row=0, column=3, padx=4)
+
+    @staticmethod
+    def _create_text_area(parent, row, column, padx):
+        frame = ttk.Frame(parent)
+        frame.grid(row=row, column=column, sticky="nsew", padx=padx)
+        frame.rowconfigure(0, weight=1)
+        frame.columnconfigure(0, weight=1)
+
+        text = tk.Text(frame, wrap="word", undo=True, font=("Segoe UI", 12))
+        text.tag_configure("hebrew", justify="right")
+
+        def align_text(event):
+            widget = event.widget
+            widget.tag_add("hebrew", "1.0", "end")
+            widget.edit_modified(False)
+
+        text.bind("<<Modified>>", align_text)
+        text.grid(row=0, column=0, sticky="nsew")
+
+        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=text.yview)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        text.configure(yscrollcommand=scrollbar.set)
+        return text
+
+    def process(self):
+        text = self.input_text.get("1.0", "end-1c")
+        result = process_text(text)
+        self.output_text.delete("1.0", "end")
+        self.output_text.insert("1.0", result, "hebrew")
+
+    def open_rtl_preview(self):
+        text = self.output_text.get("1.0", "end-1c")
+        if not text:
+            messagebox.showinfo("RTL Preview", "Process some text first.", parent=self.root)
+            return
+
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", suffix=".html", delete=False
+        ) as preview_file:
+            preview_file.write(_rtl_preview_html(text))
+            preview_path = preview_file.name
+
+        if not webbrowser.open_new_tab(preview_path):
+            messagebox.showerror("RTL Preview", "Could not open the preview in a browser.", parent=self.root)
+
+    def clear(self):
+        self.input_text.delete("1.0", "end")
+        self.output_text.delete("1.0", "end")
+
+
+def main():
+    root = tk.Tk()
+    HebrewBibleDelimiterApp(root)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()

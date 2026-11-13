@@ -1,0 +1,106 @@
+﻿# -*- coding: utf-8 -*-
+"""A simple text interface for the Hebrew Bible delimiter processor."""
+
+import re
+import tkinter as tk
+import unicodedata
+from tkinter import ttk
+
+from Hebrew_Bible_Delimiter import process_text
+
+
+_MARKER_SUFFIX = re.compile(r"((?:\((?:Potential )?\d+-(?:II|III|IV|V)\))+)\Z")
+
+
+def _reverse_grapheme_clusters(text):
+    clusters = []
+    for character in text:
+        if unicodedata.category(character) in ("Mn", "Mc", "Me") and clusters:
+            clusters[-1] += character
+        else:
+            clusters.append(character)
+    return "".join(reversed(clusters))
+
+
+def _display_rtl_token(token):
+    marker = _MARKER_SUFFIX.search(token)
+    if marker:
+        return marker.group(1) + _reverse_grapheme_clusters(token[:marker.start()])
+    return _reverse_grapheme_clusters(token)
+
+
+def _display_rtl_text(text):
+    """Keep the processor's logical Unicode order for RTL-aware renderers."""
+    return text
+
+
+class HebrewBibleDelimiterApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Hebrew Bible Delimiter")
+        self.root.geometry("1000x600")
+        self.root.minsize(700, 400)
+
+        self.root.columnconfigure(0, weight=1)
+        self.root.rowconfigure(0, weight=1)
+
+        panes = ttk.Frame(root, padding=12)
+        panes.grid(row=0, column=0, sticky="nsew")
+        panes.columnconfigure(0, weight=1)
+        panes.columnconfigure(1, weight=1)
+        panes.rowconfigure(1, weight=1)
+
+        ttk.Label(panes, text="Hebrew text").grid(row=0, column=0, sticky="w", padx=(0, 8), pady=(0, 6))
+        ttk.Label(panes, text="Processed output").grid(row=0, column=1, sticky="w", padx=(8, 0), pady=(0, 6))
+
+        self.input_text = self._create_text_area(panes, row=1, column=0, padx=(0, 8))
+        self.output_text = self._create_text_area(panes, row=1, column=1, padx=(8, 0))
+
+        button_row = ttk.Frame(panes)
+        button_row.grid(row=2, column=0, columnspan=2, pady=(12, 0))
+        ttk.Button(button_row, text="Process", command=self.process).grid(row=0, column=0, padx=4)
+        ttk.Button(button_row, text="Clear", command=self.clear).grid(row=0, column=1, padx=4)
+        ttk.Button(button_row, text="Quit", command=root.destroy).grid(row=0, column=2, padx=4)
+
+    @staticmethod
+    def _create_text_area(parent, row, column, padx):
+        frame = ttk.Frame(parent)
+        frame.grid(row=row, column=column, sticky="nsew", padx=padx)
+        frame.rowconfigure(0, weight=1)
+        frame.columnconfigure(0, weight=1)
+
+        text = tk.Text(frame, wrap="word", undo=True, font=("Segoe UI", 12))
+        text.tag_configure("hebrew", justify="right")
+
+        def align_text(event):
+            widget = event.widget
+            widget.tag_add("hebrew", "1.0", "end")
+            widget.edit_modified(False)
+
+        text.bind("<<Modified>>", align_text)
+        text.grid(row=0, column=0, sticky="nsew")
+
+        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=text.yview)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        text.configure(yscrollcommand=scrollbar.set)
+        return text
+
+    def process(self):
+        text = self.input_text.get("1.0", "end-1c")
+        result = process_text(text)
+        self.output_text.delete("1.0", "end")
+        self.output_text.insert("1.0", _display_rtl_text(result), "hebrew")
+
+    def clear(self):
+        self.input_text.delete("1.0", "end")
+        self.output_text.delete("1.0", "end")
+
+
+def main():
+    root = tk.Tk()
+    HebrewBibleDelimiterApp(root)
+    root.mainloop()
+
+
+if __name__ == "__main__":
+    main()

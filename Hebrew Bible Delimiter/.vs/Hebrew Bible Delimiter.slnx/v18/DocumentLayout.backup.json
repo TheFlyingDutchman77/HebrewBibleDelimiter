@@ -1,0 +1,114 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|solutionrelative:Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|solutionrelative:Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|solutionrelative:Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\requirements-build.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|solutionrelative:Hebrew Bible Delimiter\\requirements-build.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\build_exe.bat||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|solutionrelative:Hebrew Bible Delimiter\\build_exe.bat||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "build_exe.bat",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\build_exe.bat",
+              "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\build_exe.bat",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\build_exe.bat",
+              "RelativeToolTip": "Hebrew Bible Delimiter\\build_exe.bat",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVDhPvZJNSwJRGIWfmcaQiH6DEdEHFBEFBe6KoKKoTf8iAlOmgdbipqBf0rKICAuDkj4WERgulL5o06gLx9S53lZJzrVQgh54uXDOuefdvPAXpJReqW00y4xkQAa8RmtoWb2dz4tLKw0vyACWGZaVSkWZ48SVPDpLKvr3scyw1BtWAPfpLIenl9i5PO92jv2DODd3KW\u002BsjlJg6DqOU2JidIjJsWGckoNhKLE6iuMKQbVaQdQENSFwq1VcV3hjdZSCcrmMBsTPk5wkLtA0SF7f4pQ\u002BvFFoVjA\u002BMsja8hw93V0IV/D69sLj8xOx3T1SD2lvXC34YnVhlvmZIIV8gei2Sd628fs7vbGfCwCKRQdDh/VQBJ\u002Bvo\u002Bnl/low0N/HVmiD4PQUO7EovQH15jTL3MyApjotIbNe5f/5BEiOoURWS5r0AAAAAElFTkSuQmCC",
+              "WhenOpened": "2026-11-13T18:33:58.936Z",
+              "EditorCaption": "",
+              "OwnerCaption": "build_exe.bat"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "requirements-build.txt",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\requirements-build.txt",
+              "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\requirements-build.txt",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\requirements-build.txt",
+              "RelativeToolTip": "Hebrew Bible Delimiter\\requirements-build.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-11-13T18:33:58.872Z",
+              "EditorCaption": "",
+              "OwnerCaption": "requirements-build.txt"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hebrew Bible Delimiter_App.py",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py",
+              "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py",
+              "RelativeToolTip": "Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-11-13T18:30:33.309Z",
+              "EditorCaption": "",
+              "OwnerCaption": "Hebrew Bible Delimiter_App.py"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hebrew_Bible_Delimiter.py",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py",
+              "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py",
+              "RelativeToolTip": "Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwIAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-11-13T18:00:13.363Z",
+              "EditorCaption": "",
+              "OwnerCaption": "Hebrew_Bible_Delimiter.py"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Hebrew_Bible_Delimiter_App.py",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py",
+              "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py",
+              "RelativeToolTip": "Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAYwIoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-11-13T18:04:41.703Z",
+              "EditorCaption": "",
+              "OwnerCaption": "Hebrew_Bible_Delimiter_App.py"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

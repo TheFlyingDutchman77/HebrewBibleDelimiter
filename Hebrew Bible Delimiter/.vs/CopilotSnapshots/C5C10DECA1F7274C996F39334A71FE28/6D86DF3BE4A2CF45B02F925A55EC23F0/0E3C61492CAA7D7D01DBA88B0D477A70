@@ -1,0 +1,119 @@
+﻿
+# -*- coding: utf-8 -*-
+"""
+Add numeric markers for Hebrew disjunctive accents in a biblical verse.
+Based on the Tiberian Masoretic accent hierarchy.
+"""
+
+import re
+
+def read_text_file(path):
+    """Read UTF-8 text from a file and return it (stripped)."""
+    with open(path, "r", encoding="utf-8") as fh:
+        return fh.read().strip()
+
+
+# Mapping of disjunctive accent Unicode marks to numbers
+disjunctives = {
+    "\u05c3": "1-II",   # Silluq (sof pasuq)
+    "\u0591": "2-II",   # Atnach
+    "\u0592": "3-III",   # Segolta
+    "\u0593": "4-III",  # Shalshelet
+    "\u0594": "5-III",   # Zaqef Qaton
+    "\u0595": "6-III",   # Zaqef Gadol
+    "\u0597": "7-IV",   # Revia
+    "\u0596": "8-III",   # Tiphcha
+    "\u0598": "9-IV",  # Zarka
+    "\u0599": "10-IV",  # Pashta
+    "\u059a": "11-IV",  # Yetib
+    "\u059b": "12-IV",  # Tevir
+    "\u059c": "13-V",  # Geresh
+    "\u059e": "14-V" ,  # Gersayim
+    "\u05a1": "15-V",  # Pazer qatan
+    "\u059f": "16-V",  # Pazer Gadol
+    "\u05a0": "17-V",  # Telisha Gedola
+    "\u05c0": "Potential 18-V",  # Potential Legarmeh
+    
+    
+}
+
+# Function to insert numeric markers
+def mark_disjunctives(text):
+    for mark, num in disjunctives.items():
+        # Insert (num) immediately after any word containing the mark
+        text = re.sub(f"({mark})", f"\\1({num})", text)
+    return text
+
+def mark_disjunctives_new(text):
+    # Split text but keep whitespace so original spacing is preserved
+    tokens = re.split(r'(\s+)', text)
+    marks_set = set(disjunctives.keys())
+
+    def markers_for_token(tok):
+        seen = []
+        for ch in tok:
+            if ch in disjunctives:
+                n = disjunctives[ch]
+                if n not in seen:
+                    seen.append(n)
+        return ''.join(f"({n})" for n in seen)
+
+    out = []
+    for tok in tokens:
+        # preserve pure whitespace tokens
+        if tok.isspace() or tok == "":
+            out.append(tok)
+            continue
+        # if token contains any accent, append its marker(s) after the token
+        if any(ch in marks_set for ch in tok):
+            out.append(tok + markers_for_token(tok))
+        else:
+            out.append(tok)
+    return "".join(out)
+
+
+marked_text = mark_disjunctives_new(hebrew_text)
+
+def add_breaks_after_major(text):
+    """
+    Insert a newline immediately after every occurrence of 1-II or 2-II (always).
+    For 7-IV or 5-III insert a newline only if, since the previous inserted line-break,
+    there is at least one parenthesis '(' or ')' present before this marker.
+    Matches markers with or without surrounding parentheses, e.g. "(1-II)" or "1-II".
+    After "1-II" insert a double line break.
+    """
+    pattern = re.compile(r'\(?((?:1\-II|2\-II|7\-IV|5\-III))\)?')
+    out = []
+    last = 0
+    last_break_index = 0  # track position in original text after the last inserted break
+
+    for m in pattern.finditer(text):
+        # append text up to and including the matched marker (keeps any surrounding parens)
+        out.append(text[last:m.end()])
+        marker = m.group(1)
+        # break rules:
+        if marker == "1-II":
+            out.append("\n\n")          # double break after 1-II
+            last_break_index = m.end()
+        elif marker == "2-II":
+            out.append("\n")            # single break after 2-II
+            last_break_index = m.end()
+        else:
+            # For 7-IV or 5-III: check for any parenthesis between last_break_index and this match
+            segment = text[last_break_index:m.start()]
+            if "(" in segment or ")" in segment:
+                out.append("\n")
+                last_break_index = m.end()
+        last = m.end()
+
+    out.append(text[last:])  # append the remainder
+    return "".join(out)
+
+marked_text = add_breaks_after_major(marked_text)
+
+# write the marked text to a UTF-8 file
+OUT_FILE = "deliminated_verse.txt"
+with open(OUT_FILE, "w", encoding="utf-8") as fh:
+    fh.write(marked_text + "\n")
+
+print(f"Wrote output to {OUT_FILE}")

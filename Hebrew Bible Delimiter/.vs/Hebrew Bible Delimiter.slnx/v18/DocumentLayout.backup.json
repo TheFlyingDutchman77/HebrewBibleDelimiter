@@ -3,6 +3,24 @@
   "WorkspaceRootPath": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\HebrewBibleDelimiter\\web\\index.html||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\HebrewBibleDelimiter\\web\\service-worker.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\HebrewBibleDelimiter\\.github\\workflows\\pages.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\HebrewBibleDelimiter\\web\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\HebrewBibleDelimiter\\web\\styles.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\HebrewBibleDelimiter\\web\\app.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{04619902-4071-41DB-9C0E-0C8D4C2F521F}|Hebrew Bible Delimiter\\Hebrew Bible Delimiter.pyproj|solutionrelative:Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -34,7 +52,91 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "service-worker.js",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\web\\service-worker.js",
+              "RelativeDocumentMoniker": "..\\web\\service-worker.js",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\web\\service-worker.js",
+              "RelativeToolTip": "..\\web\\service-worker.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-13T20:15:59.442Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\web\\README.md",
+              "RelativeDocumentMoniker": "..\\web\\README.md",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\web\\README.md",
+              "RelativeToolTip": "..\\web\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-13T20:15:42.599Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pages.yml",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\.github\\workflows\\pages.yml",
+              "RelativeDocumentMoniker": "..\\.github\\workflows\\pages.yml",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\.github\\workflows\\pages.yml",
+              "RelativeToolTip": "..\\.github\\workflows\\pages.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-11-13T20:15:41.006Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "styles.css",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\web\\styles.css",
+              "RelativeDocumentMoniker": "..\\web\\styles.css",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\web\\styles.css",
+              "RelativeToolTip": "..\\web\\styles.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAEwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-13T20:15:40.166Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\web\\index.html",
+              "RelativeDocumentMoniker": "..\\web\\index.html",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\web\\index.html",
+              "RelativeToolTip": "..\\web\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-11-13T20:15:39.394Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.js",
+              "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\web\\app.js",
+              "RelativeDocumentMoniker": "..\\web\\app.js",
+              "ToolTip": "D:\\Github\\HebrewBibleDelimiter\\web\\app.js",
+              "RelativeToolTip": "..\\web\\app.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-13T20:15:37.935Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%3"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "build_exe.bat",
               "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\build_exe.bat",
               "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\build_exe.bat",
@@ -43,12 +145,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVDhPvZJNSwJRGIWfmcaQiH6DEdEHFBEFBe6KoKKoTf8iAlOmgdbipqBf0rKICAuDkj4WERgulL5o06gLx9S53lZJzrVQgh54uXDOuefdvPAXpJReqW00y4xkQAa8RmtoWb2dz4tLKw0vyACWGZaVSkWZ48SVPDpLKvr3scyw1BtWAPfpLIenl9i5PO92jv2DODd3KW\u002BsjlJg6DqOU2JidIjJsWGckoNhKLE6iuMKQbVaQdQENSFwq1VcV3hjdZSCcrmMBsTPk5wkLtA0SF7f4pQ\u002BvFFoVjA\u002BMsja8hw93V0IV/D69sLj8xOx3T1SD2lvXC34YnVhlvmZIIV8gei2Sd628fs7vbGfCwCKRQdDh/VQBJ\u002Bvo\u002Bnl/low0N/HVmiD4PQUO7EovQH15jTL3MyApjotIbNe5f/5BEiOoURWS5r0AAAAAElFTkSuQmCC",
               "WhenOpened": "2026-11-13T18:33:58.936Z",
-              "EditorCaption": "",
               "OwnerCaption": "build_exe.bat"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "requirements-build.txt",
               "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\requirements-build.txt",
               "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\requirements-build.txt",
@@ -57,16 +158,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2026-11-13T18:33:58.872Z",
-              "EditorCaption": "",
               "OwnerCaption": "requirements-build.txt"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Hebrew Bible Delimiter_App.py",
               "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py",
               "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\Hebrew Bible Delimiter_App.py",
@@ -75,12 +171,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-11-13T18:30:33.309Z",
-              "EditorCaption": "",
               "OwnerCaption": "Hebrew Bible Delimiter_App.py"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Hebrew_Bible_Delimiter.py",
               "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py",
               "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter.py",
@@ -94,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Hebrew_Bible_Delimiter_App.py",
               "DocumentMoniker": "D:\\Github\\HebrewBibleDelimiter\\Hebrew Bible Delimiter\\Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py",
               "RelativeDocumentMoniker": "Hebrew Bible Delimiter\\Hebrew_Bible_Delimiter_App.py",
@@ -103,7 +198,6 @@
               "ViewState": "AgIAAFgAAAAAAAAAAAAYwIoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-11-13T18:04:41.703Z",
-              "EditorCaption": "",
               "OwnerCaption": "Hebrew_Bible_Delimiter_App.py"
             }
           ]

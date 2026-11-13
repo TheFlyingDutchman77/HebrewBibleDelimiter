@@ -1,11 +1,11 @@
-name: Deploy Hebrew Bible Delimiter Web App
+﻿name: Deploy Hebrew Bible Delimiter Web App
 
 on:
   push:
-	branches: [main]
-	paths:
-	  - "web/**"
-	  - ".github/workflows/pages.yml"
+    branches: [main]
+    paths:
+      - "web/**"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -19,19 +19,19 @@ concurrency:
 
 jobs:
   deploy:
-	environment:
-	  name: github-pages
-	  url: ${{ steps.deployment.outputs.page_url }}
-	runs-on: ubuntu-latest
-	steps:
-	  - name: Checkout
-		uses: actions/checkout@v4
-	  - name: Configure GitHub Pages
-		uses: actions/configure-pages@v5
-	  - name: Upload website
-		uses: actions/upload-pages-artifact@v3
-		with:
-		  path: web
-	  - name: Deploy website
-		id: deployment
-		uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
